@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+
+    background-color: black;
+    background-image: url("https://www.enwallpaper.com/wp-content/uploads/2022/04/hd-tom-and-jerry-wallpaper-whatspaper.jpg");
+
+    /*opacity: 0.2;*/
+    background-size: 25%;
+    background-repeat: no-repeat;
+
+    background-position: left;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Shadows Into Light', cursive;
+    background-image: url("https://i.pinimg.com/564x/8f/ed/47/8fed4784c510529ff9b1d21d7f1bc07e.jpg");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: top right;
+
+}
+
+.start {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 8rem;
+    margin-bottom: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aqua;
+}
+
+.score {
+    color: rgb(102, 14, 190);
+    margin-top: 0%;
+
+}
+
+.game {
+    width: 800px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+
+.hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hole:after {
+    display: block;
+    background: url("https://o.remove.bg/downloads/27d36f23-6291-4f0a-afef-2f79044d14fe/image-removebg-preview.png") bottom center no-repeat;
+    background-size: contain;
+    content: '';
+    width: 110%;
+    height: 80%;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+}
+
+.mole {
+    background: url("https://o.remove.bg/downloads/e0343a25-837b-48bf-9f43-8e4b2767799c/image-removebg-preview.png") bottom center no-repeat;
+    background-size: 30%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 110%;
+    transition: all 0.4s ease;
+}
+
+.hole.up .mole {
+    top: 0;
+}
+
+button {
+    background: yellow;
+    border: red;
+    font-size: 3rem;
+    cursor: pointer;
+}
