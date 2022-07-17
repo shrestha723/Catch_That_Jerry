@@ -1,7 +1,7 @@
-const holes = document.querySelectorAll('.hole');
+  const traps = document.querySelectorAll('.trap');
   const scoreBoard = document.querySelector('.score');
-  const moles = document.querySelectorAll('.mole');
-  let lastHole;
+  const jerrys = document.querySelectorAll('.jerry');
+  let lastTrap;
   let timeUp = false;
   let score = 0;
 
@@ -9,22 +9,22 @@ const holes = document.querySelectorAll('.hole');
     return Math.round(Math.random() * (max - min) + min);
   }
 
-  function randomHole(holes) {
-    const idx = Math.floor(Math.random() * holes.length);
-    const hole = holes[idx];
-    if (hole === lastHole) {
-      return randomHole(holes);
+  function randomTrap(traps) {
+    const idx = Math.floor(Math.random() * traps.length);
+    const trap = traps[idx];
+    if (trap === lastTrap) {
+      return randomTrap(traps);
     }
-    lastHole = hole;
-    return hole;
+    lastTrap = trap;
+    return trap;
   }
 
   function peep() {
     const time = randomTime(200, 1000);
-    const hole = randomHole(holes);
-    hole.classList.add('up');
+    const trap = randomTrap(traps);
+    trap.classList.add('up');
     setTimeout(() => {
-      hole.classList.remove('up');
+      trap.classList.remove('up');
       if (!timeUp) peep();
     }, time);
   }
@@ -44,4 +44,4 @@ const holes = document.querySelectorAll('.hole');
     scoreBoard.textContent = score;
   }
 
-  moles.forEach(mole => mole.addEventListener('click', whack));
+  jerrys.forEach(jerry => jerry.addEventListener('click', whack));
