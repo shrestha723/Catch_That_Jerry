@@ -5,7 +5,7 @@ html {
     font-size: 10px;
 
     background-color: black;
-    background-image: url("../New2.jpg");
+    background-image: url("./New2.jpg");
 
     /*opacity: 0.2;*/
     background-size: 25%;
@@ -25,7 +25,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Shadows Into Light', cursive;
-    background-image: url("../New.jpg");
+    background-image: url("./New.jpg");
     background-size: 30%;
     background-repeat: no-repeat;
     background-position: top right;
@@ -67,7 +67,7 @@ h1 {
 
 .trap:after {
     display: block;
-    background: url("../Trap.png") bottom center no-repeat;
+    background: url("./Trap.png") bottom center no-repeat;
     background-size: contain;
     content: '';
     width: 110%;
@@ -78,7 +78,7 @@ h1 {
 }
 
 .jerry {
-    background: url("../Jerry.png") bottom center no-repeat;
+    background: url("./Jerry.png") bottom center no-repeat;
     background-size: 30%;
     position: absolute;
     top: 100%;
